@@ -1,0 +1,75 @@
+{
+  "jurisdiction": "singapore",
+  "currency": "SGD",
+  "fx_rate_usd": 1.34,
+  "fx_rate_source": "MAS 2024 annual average (fallback; live rate fetched from Frankfurter/ECB when available)",
+  "mode": "income_classification",
+  "tax_brackets": [
+    { "min": 0,      "max": 20000,  "rate": 0.00 },
+    { "min": 20001,  "max": 30000,  "rate": 0.02 },
+    { "min": 30001,  "max": 40000,  "rate": 0.035 },
+    { "min": 40001,  "max": 80000,  "rate": 0.07 },
+    { "min": 80001,  "max": 120000, "rate": 0.115 },
+    { "min": 120001, "max": 160000, "rate": 0.15 },
+    { "min": 160001, "max": 200000, "rate": 0.18 },
+    { "min": 200001, "max": 240000, "rate": 0.19 },
+    { "min": 240001, "max": 280000, "rate": 0.195 },
+    { "min": 280001, "max": 320000, "rate": 0.20 },
+    { "min": 320001, "max": 500000, "rate": 0.22 },
+    { "min": 500001, "max": 1000000, "rate": 0.23 },
+    { "min": 1000001, "max": null,  "rate": 0.24 }
+  ],
+  "tax_brackets_note": "IRAS resident individual income tax rates from YA 2024 onwards (Budget 2023 revised). Source: https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates",
+  "thresholds": {
+    "staking_income_report_threshold": 0,
+    "filing_threshold_note": "IRAS filing obligation applies when annual income exceeds $22,000. The threshold of 0 here means all staking/reward income is included in the calculation with no pre-filter; the $20,000 tax-free bracket in the progressive table handles the de minimis effect."
+  },
+  "rates": {
+    "capital_gain": 0.0,
+    "capital_gain_note": "Singapore does not impose capital gains tax. Gains from disposal of digital tokens held as investments are not taxable."
+  },
+  "trader_assessment": {
+    "description": "IRAS e-Tax Guide: Income Tax Treatment of Digital Tokens (2020). Badges of trade indicators to distinguish capital gains (not taxable) from trading income (taxable).",
+    "badges_of_trade": [
+      "frequency_and_volume_of_transactions",
+      "holding_period_duration",
+      "purpose_of_acquisition",
+      "financing_method",
+      "existence_of_business_organization"
+    ],
+    "classification_note": "If badges of trade indicate trading activity, gains are taxable as income under ITA s.10(1)(a). Otherwise treated as capital gains (not taxable)."
+  },
+  "references": [
+    {
+      "title": "IRAS - Individual Income Tax Rates",
+      "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates",
+      "excerpt": "Resident individual tax rates from YA 2024: 0% up to $20,000; progressive rates up to 24% above $1,000,000.",
+      "status": "official-verified",
+      "retrieval_note": "IRAS official progressive tax rates table",
+      "retrieved_at": "2026-03-14"
+    },
+    {
+      "title": "IRAS - Virtual currencies",
+      "url": "https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/what-is-taxable-what-is-not/virtual-currencies",
+      "excerpt": "IRAS official guidance distinguishing taxable income from non-taxable capital gains in personal context.",
+      "status": "official-verified",
+      "retrieval_note": "IRAS crypto tax classification guidance",
+      "retrieved_at": "2026-03-14"
+    },
+    {
+      "title": "IRAS e-Tax Guide - Income Tax Treatment of Digital Tokens",
+      "url": "https://www.iras.gov.sg/media/docs/default-source/e-tax/etaxguide_income_tax_treatment_of_digital_tokens.pdf",
+      "excerpt": "Detailed classification criteria including badges of trade, payment tokens, utility tokens, and security tokens.",
+      "status": "official-verified",
+      "retrieval_note": "IRAS official e-Tax Guide PDF for digital tokens",
+      "retrieved_at": "2026-03-14"
+    }
+  ],
+  "notes": [
+    "Classify staking/lending/jumpstart as potential taxable income",
+    "Capital gains from investment-purpose disposal are NOT taxable",
+    "Trader vs investor classification uses IRAS badges of trade framework",
+    "Tax brackets apply only to taxable income (staking/trading income), not capital gains",
+    "OKX Jumpstart rewards: treated similarly to staking rewards — tokens received for participating are classified as income at fair market value upon receipt (per IRAS e-Tax Guide s.3 on mining/staking rewards analogy)"
+  ]
+}

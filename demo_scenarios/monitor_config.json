@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "updated_at": "2026-03-25T06:21:07.893337+00:00",
+  "_comment": "Pre-TLH config: ETH/SOL/AVAX watched for TLH opportunities.",
+  "check_interval_ms": 3600000,
+  "jurisdiction": "JP",
+  "wash_sale_rule_days": 0,
+  "positions_watch": [
+    {
+      "symbol": "ETH",
+      "quantity": 8.5,
+      "cost_basis_unit": 2080.0,
+      "asset_sector": "L1",
+      "tlh_threshold_pnl": -1500.0,
+      "tlh_threshold_pct": -15,
+      "substitute_blacklist": [
+        "WETH",
+        "stETH"
+      ],
+      "wash_sale_cooldown_until": null
+    },
+    {
+      "symbol": "SOL",
+      "quantity": 80,
+      "cost_basis_unit": 140.0,
+      "asset_sector": "L1",
+      "tlh_threshold_pnl": -800.0,
+      "tlh_threshold_pct": -15,
+      "substitute_blacklist": [],
+      "wash_sale_cooldown_until": null
+    },
+    {
+      "symbol": "AVAX",
+      "quantity": 200,
+      "cost_basis_unit": 38.0,
+      "asset_sector": "L1",
+      "tlh_threshold_pnl": -600.0,
+      "tlh_threshold_pct": -15,
+      "substitute_blacklist": [],
+      "wash_sale_cooldown_until": null
+    }
+  ],
+  "last_evaluated": {
+    "timestamp": "2026-03-25T06:21:07.893328+00:00",
+    "results": {
+      "checked": 3,
+      "triggered": 3,
+      "all_clear": 0
+    }
+  }
+}

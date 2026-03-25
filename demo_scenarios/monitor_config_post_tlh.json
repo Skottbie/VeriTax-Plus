@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "updated_at": "2026-03-25T06:24:30.235393+00:00",
+  "_comment": "Post-TLH config: ETH→USDT, MATIC→AAVE, AVAX→JOE, SOL→JitoSOL. Substitutes now watched.",
+  "check_interval_ms": 3600000,
+  "jurisdiction": "JP",
+  "wash_sale_rule_days": 0,
+  "positions_watch": [
+    {
+      "symbol": "AAVE",
+      "quantity": 9,
+      "cost_basis_unit": 92.0,
+      "asset_sector": "DeFi",
+      "tlh_threshold_pnl": -100.0,
+      "tlh_threshold_pct": -15,
+      "substitute_blacklist": [
+        "MATIC"
+      ],
+      "wash_sale_cooldown_until": null
+    },
+    {
+      "symbol": "JOE",
+      "quantity": 7000,
+      "cost_basis_unit": 0.4,
+      "asset_sector": "DeFi",
+      "tlh_threshold_pnl": -400.0,
+      "tlh_threshold_pct": -15,
+      "substitute_blacklist": [
+        "AVAX"
+      ],
+      "wash_sale_cooldown_until": null
+    },
+    {
+      "symbol": "JITOSOL",
+      "quantity": 30,
+      "cost_basis_unit": 115.0,
+      "asset_sector": "L1",
+      "tlh_threshold_pnl": -500.0,
+      "tlh_threshold_pct": -15,
+      "substitute_blacklist": [
+        "SOL"
+      ],
+      "wash_sale_cooldown_until": null
+    }
+  ],
+  "executed_tlh": [
+    {
+      "asset": "ETH",
+      "sold_at": "2026-03-31T14:00:00+00:00",
+      "quantity": 8.5,
+      "price": 1620,
+      "realized_loss": -4514,
+      "substitute": "USDT",
+      "substitute_quantity": 13770,
+      "substitute_price": 1
+    },
+    {
+      "asset": "MATIC",
+      "sold_at": "2026-03-31T14:00:00+00:00",
+      "quantity": 2000,
+      "price": 0.23,
+      "realized_loss": -1042,
+      "substitute": "AAVE",
+      "substitute_quantity": 9,
+      "substitute_price": 92
+    },
+    {
+      "asset": "AVAX",
+      "sold_at": "2026-03-31T14:00:00+00:00",
+      "quantity": 100,
+      "price": 28,
+      "realized_loss": -1002,
+      "substitute": "JOE",
+      "substitute_quantity": 7000,
+      "substitute_price": 0.4
+    },
+    {
+      "asset": "SOL",
+      "sold_at": "2026-03-31T14:00:00+00:00",
+      "quantity": 30,
+      "price": 115,
+      "realized_loss": -902,
+      "substitute": "JITOSOL",
+      "substitute_quantity": 30,
+      "substitute_price": 115
+    }
+  ],
+  "last_evaluated": {
+    "timestamp": "2026-03-25T06:24:30.235382+00:00",
+    "results": {
+      "checked": 3,
+      "triggered": 0,
+      "all_clear": 3
+    }
+  }
+}

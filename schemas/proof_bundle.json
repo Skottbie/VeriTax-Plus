@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VeriTax ProofBundle",
+  "description": "Cryptographically verifiable audit trail for VeriTax tax computation pipeline",
+  "type": "object",
+  "required": ["version", "timestamp", "steps", "merkle_root", "merkle_tree", "tee_attestation", "ipfs"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "veritax-1.0",
+      "description": "Schema version identifier"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 UTC timestamp of proof generation"
+    },
+    "steps": {
+      "type": "object",
+      "description": "SHA-256 hashes of each pipeline step output",
+      "properties": {
+        "scanner": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "SHA-256 hash of ScannerClaw output"
+        },
+        "compliance": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "SHA-256 hash of ComplianceClaw output"
+        },
+        "optimizer": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "SHA-256 hash of OptimizerClaw output (optional, only when TLH was executed)"
+        }
+      },
+      "required": ["scanner", "compliance"],
+      "additionalProperties": false
+    },
+    "merkle_root": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 Merkle root binding all step hashes"
+    },
+    "merkle_tree": {
+      "type": "object",
+      "description": "Merkle tree metadata for independent verification",
+      "properties": {
+        "leaves": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "minItems": 2,
+          "maxItems": 4,
+          "description": "Ordered leaf hashes (step hashes)"
+        },
+        "layer_count": {
+          "type": "integer",
+          "minimum": 2,
+          "description": "Number of layers in the Merkle tree"
+        }
+      },
+      "required": ["leaves", "layer_count"]
+    },
+    "tee_attestation": {
+      "type": "object",
+      "description": "TEE execution environment proof (Intel TDX via Phala dStack or mock)",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["intel_tdx", "mock_tdx"],
+          "description": "Attestation mechanism used"
+        },
+        "report_data": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "SHA-256 of merkle_root, bound to TDX Quote report_data field"
+        },
+        "quote": {
+          "type": ["string", "null"],
+          "description": "Base64-encoded TDX Quote (null if mock)"
+        },
+        "note": {
+          "type": "string",
+          "description": "Human-readable note about attestation status"
+        }
+      },
+      "required": ["type", "report_data"]
+    },
+    "ipfs": {
+      "type": "object",
+      "description": "IPFS upload result via Pinata",
+      "properties": {
+        "cid": {
+          "type": "string",
+          "description": "IPFS Content Identifier (CID)"
+        },
+        "is_mock": {
+          "type": "boolean",
+          "description": "True if CID was generated locally (no Pinata JWT)"
+        },
+        "note": {
+          "type": "string",
+          "description": "Human-readable note about IPFS status"
+        }
+      },
+      "required": ["cid", "is_mock"]
+    }
+  },
+  "additionalProperties": false
+}

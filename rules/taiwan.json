@@ -1,0 +1,61 @@
+{
+  "jurisdiction": "taiwan",
+  "currency": "TWD",
+  "fx_rate_usd": 31.5,
+  "fx_rate_source": "CBC 2024 annual average (hardcoded; TWD not available in ECB/Frankfurter)",
+  "mode": "self_check",
+  "tax_brackets": [
+    { "min": 0,       "max": 560000,  "rate": 0.05, "deduction": 0 },
+    { "min": 560001,  "max": 1260000, "rate": 0.12, "deduction": 39200 },
+    { "min": 1260001, "max": 2520000, "rate": 0.20, "deduction": 140000 },
+    { "min": 2520001, "max": 4720000, "rate": 0.30, "deduction": 392000 },
+    { "min": 4720001, "max": null,    "rate": 0.40, "deduction": 864000 }
+  ],
+  "tax_brackets_note": "所得稅法第5條 綜合所得稅累進稅率 (113年度適用)。Source: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=5. 速算公式: 應納稅額 = 綜合所得淨額 × 稅率 - 累進差額。",
+  "rates": {
+    "capital_gain": 0.0,
+    "capital_gain_note": "台灣目前無加密貨幣資本利得稅。個人買賣虛擬通貨之所得尚無明確課稅規定。"
+  },
+  "income_classification": {
+    "staking_mining_note": "財政部函釋：個人挖礦/質押取得之虛擬通貨，可能歸類為「其他所得」(所得稅法第14條第1項第10類)，依綜合所得稅累進稅率課稅。",
+    "trading_note": "個人買賣虛擬通貨之所得，目前財政部未明確發布課稅規定。自查報告中列出供參考。"
+  },
+  "references": [
+    {
+      "title": "所得稅法第5條 (綜合所得稅稅率)",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=5",
+      "excerpt": "綜合所得稅稅率：5%、12%、20%、30%、40% 五級累進。",
+      "status": "official-verified",
+      "retrieval_note": "全國法規資料庫 official legislation",
+      "retrieved_at": "2026-03-14"
+    },
+    {
+      "title": "Ministry of Finance, R.O.C. (Taiwan)",
+      "url": "https://www.mof.gov.tw/",
+      "excerpt": "Official policy and tax administration portal. Used as authoritative entry source for current tax announcements.",
+      "status": "official-verified",
+      "retrieved_at": "2026-03-13"
+    },
+    {
+      "title": "財政部賦稅署 — 虛擬通貨課稅相關新聞稿",
+      "url": "https://www.dot.gov.tw/",
+      "excerpt": "賦稅署為綜合所得稅政策主管機關。目前無針對個人加密貨幣交易之大規模執法公告，個案查核由各區國稅局執行。",
+      "status": "policy-reference",
+      "retrieved_at": "2026-03-15"
+    },
+    {
+      "title": "Laws & Regulations Database of The Republic of China",
+      "url": "https://law.moj.gov.tw/Law/LawSearchAll.aspx",
+      "excerpt": "Official legal database used for statute-level verification and amendment tracking.",
+      "status": "official-verified",
+      "retrieved_at": "2026-03-13"
+    }
+  ],
+  "notes": [
+    "Self-check report mode; classify taxable income events",
+    "Trading gains: no clear taxation rule yet, listed for self-check reference",
+    "Staking/mining income: may be taxed as 'other income' under progressive rates",
+    "Tax brackets provided for staking/other income calculation in self-check mode",
+    "注意：本工具計算之 potential_tax 為未扣除免稅額(每人97,000 TWD)及扣除額(標準131,000 TWD)之保守估算值。實際應納稅額 = (綜合所得淨額 − 免稅額 − 扣除額) × 稅率 − 累進差額，將低於本工具顯示金額。"
+  ]
+}

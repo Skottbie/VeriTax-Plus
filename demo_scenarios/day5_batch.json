@@ -1,0 +1,9 @@
+{
+  "_comment": "Demo incremental batch: April 2 — Normal day. 1 trade + 1 funding fee (OKX Edition)",
+  "trades": [
+    {"instId":"OKB-USDT","instType":"SPOT","side":"buy","fillSz":"2","fillPx":"595","fee":"-0.595","feeCcy":"USDT","ts":1743552000000,"tradeId":"900012","ordId":"790012","pnl":"0"},
+    {"instId":"BTC-USDT-SWAP","instType":"SWAP","side":"","fillSz":"0","fillPx":"0","fee":"0","feeCcy":"USDT","ts":1743559200000,"tradeId":"","ordId":"","pnl":"-1.85","billSubType":"FUNDING_FEE"}
+  ],
+  "deposits": [],
+  "withdrawals": []
+}

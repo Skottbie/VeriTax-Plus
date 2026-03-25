@@ -1,0 +1,72 @@
+{
+  "agent": {
+    "name": "veritax-okx",
+    "description": "VeriTax 2.0 (OKX Edition) — CARF-era AI Crypto Personal Tax OS. Multi-jurisdiction tax compliance (JP/TW/AU/CA/SG), TLH optimization with auto-execution via OKX Spot (ATK CLI), and cryptographically verifiable audit trails (zkTLS + TEE + Merkle/IPFS). Built on OKX OnchainOS.",
+    "model": "gemini-3-flash",
+    "temperature": 0.3
+  },
+  "channels": {
+    "terminal": { "enabled": true },
+    "telegram": { "enabled": false, "_note": "TG managed by Veriverse Gateway Router" },
+    "whatsapp": { "enabled": false }
+  },
+  "skills": {
+    "load": {
+      "watch": true,
+      "watchDebounceMs": 250
+    },
+    "entries": {
+      "master-claw": { "enabled": true },
+      "scanner-claw": { "enabled": true },
+      "compliance-claw": { "enabled": true },
+      "optimizer-claw": { "enabled": true },
+      "auditor-claw": { "enabled": true },
+      "okx-wallet-portfolio": {
+        "enabled": true,
+        "note": "OKX OnchainOS: check wallet balance by address"
+      },
+      "okx-dex-swap": {
+        "enabled": true,
+        "note": "OKX OnchainOS: token swap for TLH substitute buy"
+      },
+      "okx-dex-market": {
+        "enabled": true,
+        "note": "OKX OnchainOS: real-time prices + smart money signals"
+      },
+      "okx-dex-token": {
+        "enabled": true,
+        "note": "OKX OnchainOS: token metadata, liquidity, holder distribution"
+      },
+      "okx-onchain-gateway": {
+        "enabled": true,
+        "note": "OKX OnchainOS: gas estimation + tx status tracking"
+      }
+    }
+  },
+  "cron": {
+    "enabled": true,
+    "sessionRetention": "24h",
+    "maxConcurrentRuns": 1
+  },
+  "compaction": {
+    "model": "gemini-3-flash",
+    "reserveTokensFloor": 20000,
+    "memoryFlush": {
+      "enabled": true,
+      "softThresholdTokens": 4000,
+      "systemPrompt": "VeriTax monitor session nearing compaction. Persist critical state to memory now.",
+      "prompt": "Write current monitor_config.json thresholds (positions_watch, executed_tlh, wash_sale records) and any pending TLH decisions to memory/YYYY-MM-DD.md under a '## Monitor State Snapshot' section. Reply with NO_REPLY if nothing to store."
+    }
+  },
+  "env": {
+    "loadDotenv": true,
+    "vars": {
+      "OKX_API_KEY": "4bc3c6ec-74a0-4bbe-a346-ef0682340534",
+      "OKX_SECRET_KEY": "3F3F1A200F6295737710DB2644E7A7A9",
+      "OKX_PASSPHRASE": "TaYossX82693@",
+      "OKX_SANDBOX": "false",
+      "VERITAX_DEMO": "0"
+    }
+  },
+  "version": "2.0.0"
+}

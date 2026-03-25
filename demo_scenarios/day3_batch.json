@@ -1,0 +1,8 @@
+{
+  "_comment": "Demo incremental batch: March 31 — 1 small trade, ETH about to crash (OKX Edition)",
+  "trades": [
+    {"instId":"OKB-USDT","instType":"SPOT","side":"buy","fillSz":"2","fillPx":"620","fee":"-0.002","feeCcy":"OKB","ts":1743379200000,"tradeId":"900006","ordId":"790006","pnl":"0"}
+  ],
+  "deposits": [],
+  "withdrawals": []
+}

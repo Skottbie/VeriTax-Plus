@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "source": "scanner-claw",
+  "year": 2026,
+  "scope": "all",
+  "onchain": {"address": "0xDemoAddr1234567890abcdef1234567890abcdef", "chainId": "196"},
+  "period": {"startTime": 1704067200000, "endTime": 1735689599999},
+  "warnings": ["Demo dataset — synthetic data for testing (OKX Edition)"],
+  "data": {
+    "account_balances": [
+      {"ccy": "BTC", "eq": "0.5", "availBal": "0.5", "frozenBal": "0"},
+      {"ccy": "ETH", "eq": "5.0", "availBal": "5.0", "frozenBal": "0"},
+      {"ccy": "OKB", "eq": "20.0", "availBal": "20.0", "frozenBal": "0"},
+      {"ccy": "MATIC", "eq": "2000", "availBal": "2000", "frozenBal": "0"},
+      {"ccy": "USDT", "eq": "12500", "availBal": "12500", "frozenBal": "0"}
+    ],
+    "trades": [
+      {"instId":"BTC-USDT","instType":"SPOT","side":"buy","fillSz":"1.0","fillPx":"40000","fee":"-0.001","feeCcy":"BTC","ts":1704240000000,"tradeId":"800001","ordId":"700001","pnl":"0"},
+      {"instId":"BTC-USDT","instType":"SPOT","side":"sell","fillSz":"0.5","fillPx":"60000","fee":"-15","feeCcy":"USDT","ts":1717632000000,"tradeId":"800002","ordId":"700002","pnl":"0"},
+      {"instId":"ETH-USDT","instType":"SPOT","side":"buy","fillSz":"10","fillPx":"2200","fee":"-11","feeCcy":"USDT","ts":1706918400000,"tradeId":"800003","ordId":"700003","pnl":"0"},
+      {"instId":"ETH-USDT","instType":"SPOT","side":"sell","fillSz":"5","fillPx":"1800","fee":"-4.5","feeCcy":"USDT","ts":1722816000000,"tradeId":"800004","ordId":"700004","pnl":"0"},
+      {"instId":"SOL-USDT","instType":"SPOT","side":"buy","fillSz":"50","fillPx":"100","fee":"-2.5","feeCcy":"USDT","ts":1709510400000,"tradeId":"800005","ordId":"700005","pnl":"0"},
+      {"instId":"SOL-USDT","instType":"SPOT","side":"sell","fillSz":"50","fillPx":"70","fee":"-1.75","feeCcy":"USDT","ts":1725408000000,"tradeId":"800006","ordId":"700006","pnl":"0"},
+      {"instId":"OKB-USDT","instType":"SPOT","side":"buy","fillSz":"20","fillPx":"310","fee":"-0.02","feeCcy":"OKB","ts":1712102400000,"tradeId":"800007","ordId":"700007","pnl":"0"},
+      {"instId":"AVAX-USDT","instType":"SPOT","side":"buy","fillSz":"100","fillPx":"40","fee":"-2","feeCcy":"USDT","ts":1714780800000,"tradeId":"800008","ordId":"700008","pnl":"0"},
+      {"instId":"AVAX-USDT","instType":"SPOT","side":"sell","fillSz":"100","fillPx":"25","fee":"-1.25","feeCcy":"USDT","ts":1728000000000,"tradeId":"800009","ordId":"700009","pnl":"0"},
+      {"instId":"MATIC-USDT","instType":"SPOT","side":"buy","fillSz":"5000","fillPx":"0.90","fee":"-2.25","feeCcy":"USDT","ts":1709596800000,"tradeId":"800010","ordId":"700010","pnl":"0"},
+      {"instId":"MATIC-USDT","instType":"SPOT","side":"sell","fillSz":"3000","fillPx":"0.55","fee":"-0.825","feeCcy":"USDT","ts":1730764800000,"tradeId":"800011","ordId":"700011","pnl":"0"},
+      {"instId":"BTC-USDT-SWAP","instType":"SWAP","side":"sell","fillSz":"0.1","fillPx":"60000","fee":"-2.5","feeCcy":"USDT","ts":1718236800000,"tradeId":"810001","ordId":"710001","pnl":"350.00"},
+      {"instId":"BTC-USDT-SWAP","instType":"SWAP","side":"","fillSz":"0","fillPx":"0","fee":"0","feeCcy":"USDT","ts":1718323200000,"tradeId":"","ordId":"","pnl":"-12.50","billSubType":"FUNDING_FEE"},
+      {"instId":"ETH-USDT-SWAP","instType":"SWAP","side":"buy","fillSz":"2","fillPx":"2000","fee":"-1.5","feeCcy":"USDT","ts":1720828800000,"tradeId":"810002","ordId":"710002","pnl":"-180.00"},
+      {"instId":"ETH-USDT-SWAP","instType":"SWAP","side":"","fillSz":"0","fillPx":"0","fee":"0","feeCcy":"USDT","ts":1720915200000,"tradeId":"","ordId":"","pnl":"8.30","billSubType":"FUNDING_FEE"},
+      {"instId":"SOL-USDT-SWAP","instType":"SWAP","side":"sell","fillSz":"10","fillPx":"120","fee":"-0.6","feeCcy":"USDT","ts":1726617600000,"tradeId":"810003","ordId":"710003","pnl":"220.00"},
+      {"instId":"SOL-USDT-SWAP","instType":"SWAP","side":"","fillSz":"0","fillPx":"0","fee":"0","feeCcy":"USDT","ts":1726704000000,"tradeId":"","ordId":"","pnl":"-5.00","billSubType":"FUNDING_FEE"},
+      {"instId":"BTC-USDT","instType":"MARGIN","side":"buy","fillSz":"0.1","fillPx":"58000","fee":"-2.9","feeCcy":"USDT","ts":1719360000000,"tradeId":"820001","ordId":"720001","pnl":"0"},
+      {"instId":"BTC-USDT","instType":"MARGIN","side":"sell","fillSz":"0.1","fillPx":"62500","fee":"-3.125","feeCcy":"USDT","ts":1721952000000,"tradeId":"820002","ordId":"720002","pnl":"0"},
+      {"instId":"ETH-USDT","instType":"MARGIN","side":"buy","fillSz":"2","fillPx":"2500","fee":"-2.5","feeCcy":"USDT","ts":1724544000000,"tradeId":"820003","ordId":"720003","pnl":"0"}
+    ],
+    "deposits": [
+      {"type":"deposit","amt":"50000","ccy":"USDT","chain":"USDT-TRC20","txId":"0xdemo_deposit_1","ts":1704326400000,"fee":"0","state":"2","depId":"dep001"},
+      {"type":"deposit","amt":"10000","ccy":"USDT","chain":"USDT-ERC20","txId":"0xdemo_deposit_2","ts":1712188800000,"fee":"0","state":"2","depId":"dep002"}
+    ],
+    "withdrawals": [
+      {"type":"withdrawal","amt":"5000","ccy":"USDT","chain":"USDT-TRC20","txId":"0xdemo_withdraw_1","ts":1726416000000,"fee":"1","state":"2","wdId":"wd001"}
+    ],
+    "earn_records": [
+      {"type":"earn_savings","amt":"120","ccy":"USDT","ts":1714867200000,"product":"Simple Earn Interest"},
+      {"type":"earn_savings","amt":"85","ccy":"USDT","ts":1720224000000,"product":"On-chain Earn Staking Reward"},
+      {"type":"earn_savings","amt":"200","ccy":"USDT","ts":1722816000000,"product":"Jumpstart Mining Reward"},
+      {"type":"earn_savings","amt":"15","ccy":"OKB","ts":1725494400000,"product":"OKX Earn Staking Reward"},
+      {"type":"earn_savings","amt":"50","ccy":"USDT","ts":1729123200000,"product":"Simple Earn Interest"}
+    ],
+    "trade_fees": [
+      {"instType":"SPOT","maker":"-0.001","taker":"-0.001","ts":0},
+      {"instType":"SWAP","maker":"-0.0002","taker":"-0.0005","ts":0},
+      {"instType":"FUTURES","maker":"-0.0002","taker":"-0.0005","ts":0}
+    ],
+    "onchain_holdings": [
+      {"tokenSymbol":"UNI","tokenName":"Uniswap","tokenAddress":"0x1f9840a85d5af5bf1d1762f925bdaddc4201f984","chainId":"196","amount":"150","valueUsd":"450.00","price":"3.00"},
+      {"tokenSymbol":"WETH","tokenName":"Wrapped Ether","tokenAddress":"0x5a77f1443d16ee5c8a8fdc02b0b852e30448a05c","chainId":"196","amount":"0.25","valueUsd":"500.00","price":"2000.00"},
+      {"tokenSymbol":"USDC","tokenName":"USD Coin","tokenAddress":"0xa8ce8aee21bc2a48a5ef670afcc9274c7bf361e1","chainId":"196","amount":"500","valueUsd":"500.00","price":"1.00"}
+    ],
+    "timeline": [],
+    "summary": {}
+  }
+}

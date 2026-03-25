@@ -1,0 +1,12 @@
+{
+  "_comment": "Demo incremental batch: March 30 — 2 new trades (ETH position grows) (OKX Edition)",
+  "trades": [
+    {"instId":"ETH-USDT","instType":"SPOT","side":"buy","fillSz":"1.5","fillPx":"2050","fee":"-1.5375","feeCcy":"USDT","ts":1743292800000,"tradeId":"900004","ordId":"790004","pnl":"0"},
+    {"instId":"AVAX-USDT","instType":"SPOT","side":"buy","fillSz":"100","fillPx":"38","fee":"-1.9","feeCcy":"USDT","ts":1743300000000,"tradeId":"900005","ordId":"790005","pnl":"0"},
+    {"instId":"ETH-USDT-SWAP","instType":"SWAP","side":"buy","fillSz":"1","fillPx":"2050","fee":"-1","feeCcy":"USDT","ts":1743307200000,"tradeId":"910001","ordId":"710004","pnl":"-85.00"}
+  ],
+  "deposits": [
+    {"type":"deposit","amt":"5000","ccy":"USDT","chain":"USDT-TRC20","txId":"0xdemo_dep_inc_1","ts":1743310800000,"fee":"0","state":"2","depId":"dep_inc_001"}
+  ],
+  "withdrawals": []
+}

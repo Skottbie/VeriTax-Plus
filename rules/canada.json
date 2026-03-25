@@ -1,0 +1,56 @@
+{
+  "jurisdiction": "canada",
+  "currency": "CAD",
+  "fx_rate_usd": 1.37,
+  "fx_rate_source": "BoC 2024 annual average (fallback; live rate fetched from Frankfurter/ECB when available)",
+  "mode": "acb",
+  "cost_basis_method": "total_average",
+  "cost_basis_method_note": "CRA requires Adjusted Cost Base (ACB) for identical properties (ITA s.47). ACB is a weighted average cost method: ACB per unit = total cost of all holdings / total units held. This tool's 'total_average' implementation matches CRA ACB computation.",
+  "tax_brackets": [
+    { "min": 0,      "max": 55867,  "rate": 0.15 },
+    { "min": 55868,  "max": 111733, "rate": 0.205 },
+    { "min": 111734, "max": 154906, "rate": 0.26 },
+    { "min": 154907, "max": 220000, "rate": 0.29 },
+    { "min": 220001, "max": null,   "rate": 0.33 }
+  ],
+  "tax_brackets_note": "CRA 2024 federal income tax brackets. Source: https://www.canada.ca/en/revenue-agency/services/tax/individuals/frequently-asked-questions-individuals/canadian-income-tax-rates-individuals-current-previous-years.html. Note: provincial tax rates are additional and vary by province.",
+  "rates": {
+    "inclusion_rate": 0.5,
+    "inclusion_rate_note": "Capital gains inclusion rate is 50%. Budget 2024 proposed increasing to 66.7% for gains exceeding $250,000 CAD, but this proposal was withdrawn in January 2025 and never enacted."
+  },
+  "rules": {
+    "superficial_loss_days": 30,
+    "superficial_loss_note": "ITA s.54 'superficial loss': loss denied when same property acquired within 30 days before or after the sale, and still held at 30 days after."
+  },
+  "references": [
+    {
+      "title": "CRA - Canadian income tax rates for individuals (current and previous years)",
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/frequently-asked-questions-individuals/canadian-income-tax-rates-individuals-current-previous-years.html",
+      "excerpt": "Federal tax brackets for 2024: 15% on first $55,867; 20.5% on $55,868-$111,733; 26% on $111,734-$154,906; 29% on $154,907-$220,000; 33% over $220,000.",
+      "status": "official-verified",
+      "retrieval_note": "CRA official federal tax rate schedule",
+      "retrieved_at": "2026-03-14"
+    },
+    {
+      "title": "CRA - Guide for cryptocurrency users and tax professionals",
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/sole-proprietorships-partnerships/report-business-income-expenses/what-business-income/cryptocurrency.html",
+      "excerpt": "CRA official guidance on whether crypto activity is business income or capital treatment.",
+      "status": "official-verified",
+      "retrieval_note": "CRA crypto tax classification guidance",
+      "retrieved_at": "2026-03-13"
+    },
+    {
+      "title": "CRA - Superficial losses (ITA s.54)",
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-12700-capital-gains/completing-schedule-3/capital-losses-deductions/what-a-superficial-loss.html",
+      "excerpt": "A superficial loss occurs when you dispose of property at a loss and acquire the same or identical property within 30 days.",
+      "status": "official-verified",
+      "retrieval_note": "CRA official superficial loss guidance",
+      "retrieved_at": "2026-03-14"
+    }
+  ],
+  "notes": [
+    "Use ACB (Adjusted Cost Base) method and apply superficial loss checks",
+    "Only federal brackets included; provincial tax is additional and varies",
+    "Inclusion rate 50% applies to net capital gains (66.7% proposal was withdrawn Jan 2025)"
+  ]
+}

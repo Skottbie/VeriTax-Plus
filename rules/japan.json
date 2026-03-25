@@ -1,0 +1,72 @@
+{
+  "jurisdiction": "japan",
+  "currency": "JPY",
+  "fx_rate_usd": 151.0,
+  "fx_rate_source": "BoJ 2024 annual average (fallback; live rate fetched from Frankfurter/ECB when available)",
+  "mode": "progressive_miscellaneous",
+  "tax_year_hint": 2024,
+  "cost_basis_method": "total_average",
+  "cost_basis_method_note": "所得税法施行令第119条の2: 暗号資産の取得価額は総平均法が法定評価方法。届出により移動平均法も選択可。",
+  "tax_brackets": [
+    { "min": 0,        "max": 1949000,  "rate": 0.05,  "deduction": 0 },
+    { "min": 1950000,  "max": 3299000,  "rate": 0.10,  "deduction": 97500 },
+    { "min": 3300000,  "max": 6949000,  "rate": 0.20,  "deduction": 427500 },
+    { "min": 6950000,  "max": 8999000,  "rate": 0.23,  "deduction": 636000 },
+    { "min": 9000000,  "max": 17999000, "rate": 0.33,  "deduction": 1536000 },
+    { "min": 18000000, "max": 39999000, "rate": 0.40,  "deduction": 2796000 },
+    { "min": 40000000, "max": null,     "rate": 0.45,  "deduction": 4796000 }
+  ],
+  "tax_brackets_note": "NTA No.2260 所得税の速算表 (令和7年4月1日現在法令等)。根拠法令: 所法89条。",
+  "surcharges": {
+    "resident_tax_rate": 0.10,
+    "resident_tax_note": "住民税は一律10% (道府県民税4% + 市区町村民税6%)",
+    "reconstruction_surcharge_rate": 0.021,
+    "reconstruction_surcharge_note": "復興特別所得税: 基準所得税額×2.1% (平成25年~令和19年, 復興財確法8条)"
+  },
+  "carry_loss_years": 0,
+  "carry_loss_note": "雑所得は損失繰越控除の対象外。損益通算も原則不可 (所法69条)。",
+  "proposed_reform": {
+    "status": "cabinet_outline_approved_pending_diet_passage",
+    "description": "2025年12月19日 自民党・公明党「令和8年度税制改正大綱」発表。グリーンゾーン（現物取引・デリバティブ・ETF）→20%申告分離課税+3年損失繰越。ステーキング・レンディング・NFT→引き続き雑所得（最高55%）。国会審議・可決を経て立法化予定。",
+    "outline_date": "2025-12-19",
+    "rates": {
+      "specified_crypto": 0.20,
+      "specified_crypto_note": "15%所得税+2.1%復興特別所得税+5%住民税=約20.315%",
+      "non_specified_crypto": 0.55
+    },
+    "green_zone": ["spot_trading", "derivatives", "etf"],
+    "excluded_from_reform": ["staking", "lending", "nft"],
+    "carry_loss_years": 3
+  },
+  "references": [
+    {
+      "title": "NTA No.2260 所得税の税率",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+      "excerpt": "所得税の税率は5%から45%の7段階に区分。速算表による計算方法を規定。根拠法令: 所法89。",
+      "status": "official-verified",
+      "retrieval_note": "Fetched and verified NTA progressive tax table on 2026-03-14",
+      "retrieved_at": "2026-03-14"
+    },
+    {
+      "title": "NTA No.1524 暗号資産を使用することにより利益が生じた場合の課税関係",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1524.htm",
+      "excerpt": "暗号資産の売却・交換による所得は原則として雑所得に区分。総合課税の対象。",
+      "status": "official-verified",
+      "retrieval_note": "NTA official crypto tax classification guidance",
+      "retrieved_at": "2026-03-14"
+    },
+    {
+      "title": "Financial Services Agency (Japan) - Crypto Assets",
+      "url": "https://www.fsa.go.jp/policy/virtual_currency/index.html",
+      "excerpt": "FSA official portal for crypto-asset regulatory context and definitions.",
+      "status": "official-verified",
+      "retrieval_note": "FSA regulatory portal for virtual currency definitions",
+      "retrieved_at": "2026-03-13"
+    }
+  ],
+  "notes": [
+    "暗号資産の所得は雑所得として総合課税 (NTA No.1524)",
+    "法定評価方法は総平均法。届出により移動平均法を選択可能",
+    "proposed_reform セクションは未立法の改革案を参考情報として格納"
+  ]
+}

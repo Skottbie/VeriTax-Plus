@@ -1,0 +1,33 @@
+{
+  "_comment": "Price series for TLH monitor demo. Day1-2: normal. Day3: crash. Day4-5: post-TLH recovery. (OKX Edition)",
+  "day1": {
+    "_label": "March 29 — all stable",
+    "prices": {"BTC": 87500, "ETH": 2100, "SOL": 145, "AVAX": 38, "OKB": 620},
+    "balances": {"BTC": 0.55, "ETH": 7.0, "SOL": 80, "AVAX": 100, "OKB": 22, "USDT": 15000}
+  },
+  "day2": {
+    "_label": "March 30 — ETH dips slightly",
+    "prices": {"BTC": 86800, "ETH": 1980, "SOL": 140, "AVAX": 36, "OKB": 615},
+    "balances": {"BTC": 0.55, "ETH": 8.5, "SOL": 80, "AVAX": 200, "OKB": 24, "USDT": 16800}
+  },
+  "day3_pre": {
+    "_label": "March 31 morning — ETH drops more",
+    "prices": {"BTC": 84000, "ETH": 1750, "SOL": 128, "AVAX": 32, "OKB": 600},
+    "balances": {"BTC": 0.55, "ETH": 8.5, "SOL": 80, "AVAX": 200, "OKB": 24, "USDT": 16800}
+  },
+  "day3_crash": {
+    "_label": "March 31 afternoon \u2014 ETH flash crash! -22% from cost basis",
+    "prices": {"BTC": 82000, "ETH": 1620, "SOL": 115, "AVAX": 28, "OKB": 580, "MATIC": 0.38, "AAVE": 92, "JOE": 0.40, "JITOSOL": 115},
+    "balances": {"BTC": 0.55, "ETH": 8.5, "SOL": 80, "AVAX": 200, "OKB": 24, "USDT": 16800}
+  },
+  "day4": {
+    "_label": "April 1 — Post-TLH (4 assets sold: ETH→USDT, MATIC→AAVE, AVAX→JOE, SOL→JitoSOL). Market recovering.",
+    "prices": {"BTC": 83500, "ETH": 1680, "OKB": 590, "AAVE": 92, "JOE": 0.42, "JITOSOL": 118},
+    "balances": {"BTC": 0.55, "OKB": 26, "USDT": 13770, "AAVE": 9, "JOE": 7000, "JITOSOL": 30}
+  },
+  "day5": {
+    "_label": "April 2 — Continued recovery, system monitoring as usual.",
+    "prices": {"BTC": 84800, "ETH": 1720, "OKB": 595, "AAVE": 95, "JOE": 0.44, "JITOSOL": 122},
+    "balances": {"BTC": 0.55, "OKB": 26, "USDT": 13770, "AAVE": 9, "JOE": 7200, "JITOSOL": 30}
+  }
+}

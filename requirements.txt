@@ -1,0 +1,19 @@
+# VeriTax Protocol Layer — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# Core
+python-dotenv>=1.0.0        # .env file loading
+requests>=2.31.0            # HTTP client (fallback, primary via ATK CLI)
+openpyxl>=3.1.0             # XLSX import for exchange export files
+
+# TEE Attestation (from VeriTask)
+dstack-sdk>=0.5.3           # Phala dStack SDK for Intel TDX quotes
+
+# Crypto utilities
+eth-account>=0.11.0         # Ethereum account utilities (for proof signing)
+pycryptodome>=3.19.0        # SHA256 / cryptographic hashing
+
+# Data processing
+pandas>=2.1.0               # Transaction data analysis
+fastapi>=0.115.0            # Remote Phala attestation service
+uvicorn[standard]>=0.30.0   # FastAPI runtime for auditor node

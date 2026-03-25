@@ -1,0 +1,61 @@
+# Environment & secrets
+.env
+.env.local
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+*.egg-info/
+dist/
+build/
+
+# Node.js
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs / runtime output
+*.log
+nohup.out
+.openclaw/
+
+# Session / temp artifacts
+_session_*.jsonl
+_session_*_raw.jsonl
+tmp_*.json
+tmp_*.jsonl
+tmp*.jsonl
+/tmp/
+
+# Debug / diagnostic scripts (dev-time artifacts, moved to archive/)
+/archive/
+_*.py
+_*.sh
+typescript
+
+# Backup files
+*.bak
+
+# Project-local must-not-commit folders
+MustReadFirst_donotcommit/
+MustRead_donotcommit/
+DEVELOPMENT_PLAN.md
+DESIGN_VERITAX_OKX.md

@@ -1,0 +1,56 @@
+{
+  "jurisdiction": "australia",
+  "currency": "AUD",
+  "fx_rate_usd": 1.53,
+  "fx_rate_source": "RBA 2024 annual average (fallback; live rate fetched from Frankfurter/ECB when available)",
+  "mode": "cgt",
+  "tax_brackets": [
+    { "min": 0,      "max": 18200,  "rate": 0.00 },
+    { "min": 18201,  "max": 45000,  "rate": 0.16 },
+    { "min": 45001,  "max": 135000, "rate": 0.30 },
+    { "min": 135001, "max": 190000, "rate": 0.37 },
+    { "min": 190001, "max": null,   "rate": 0.45 }
+  ],
+  "tax_brackets_note": "ATO Australian resident tax rates 2024-25 and 2025-26 (Stage 3 tax cuts). Source: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents",
+  "rates": {
+    "medicare_levy": 0.02,
+    "long_term_discount": 0.5
+  },
+  "anti_avoidance": {
+    "wash_sale_warning": true,
+    "note": "ATO applies Part IVA general anti-avoidance provisions to 'asset wash sales'. No formal 30-day rule like Canada, but selling at a loss and reacquiring the same asset to crystallize losses may be challenged.",
+    "reference": "https://www.ato.gov.au/media-centre/wash-sales-the-ato-is-cleaning-up-dirty-laundry"
+  },
+  "references": [
+    {
+      "title": "ATO - Tax rates – Australian resident (2024-25, 2025-26)",
+      "url": "https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents",
+      "excerpt": "Australian resident tax rates: 0-$18,200 Nil; $18,201-$45,000 16%; $45,001-$135,000 30%; $135,001-$190,000 37%; $190,001+ 45%. Does not include Medicare levy 2%.",
+      "status": "official-verified",
+      "retrieval_note": "Fetched and verified ATO progressive brackets (Stage 3) on 2026-03-14",
+      "retrieved_at": "2026-03-14"
+    },
+    {
+      "title": "ATO - Crypto asset investments",
+      "url": "https://www.ato.gov.au/individuals-and-families/investments-and-assets/crypto-asset-investments",
+      "excerpt": "ATO official crypto-asset guidance entry page for CGT and disposal events.",
+      "status": "official-verified",
+      "retrieval_note": "Fetched successfully via tool on 2026-03-13",
+      "retrieved_at": "2026-03-13"
+    },
+    {
+      "title": "ATO - Medicare levy",
+      "url": "https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy",
+      "excerpt": "Medicare levy is payable at 2% in addition to income tax on taxable income.",
+      "status": "official-verified",
+      "retrieval_note": "Fetched successfully via tool on 2026-03-13",
+      "retrieved_at": "2026-03-13"
+    }
+  ],
+  "notes": [
+    "Applies lot-level logic when holding-period data is available",
+    "CGT discount of 50% for assets held 12+ months before disposal (ATO excludes both acquisition and CGT event days)",
+    "Tax brackets are Stage 3 rates effective from 1 July 2024",
+    "ATO allows 'parcel' selection (specific identification) — taxpayer may choose which acquisition lot to dispose of. FIFO is used as default in this tool."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "_comment": "Demo incremental batch: March 29 — 3 new trades detected (OKX Edition)",
+  "trades": [
+    {"instId":"ETH-USDT","instType":"SPOT","side":"buy","fillSz":"2.0","fillPx":"2100","fee":"-2.1","feeCcy":"USDT","ts":1743206400000,"tradeId":"900001","ordId":"790001","pnl":"0"},
+    {"instId":"SOL-USDT","instType":"SPOT","side":"buy","fillSz":"30","fillPx":"145","fee":"-2.175","feeCcy":"USDT","ts":1743213600000,"tradeId":"900002","ordId":"790002","pnl":"0"},
+    {"instId":"BTC-USDT","instType":"SPOT","side":"buy","fillSz":"0.05","fillPx":"87500","fee":"-0.0000225","feeCcy":"BTC","ts":1743220800000,"tradeId":"900003","ordId":"790003","pnl":"0"},
+    {"instId":"BTC-USDT-SWAP","instType":"SWAP","side":"","fillSz":"0","fillPx":"0","fee":"0","feeCcy":"USDT","ts":1743228000000,"tradeId":"","ordId":"","pnl":"-3.20","billSubType":"FUNDING_FEE"}
+  ],
+  "deposits": [],
+  "withdrawals": []
+}
